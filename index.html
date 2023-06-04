@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countries Website</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./elementDefines.js"></script>
+    <script defer src="./script.js"></script>
+    <script defer src="./paginate.js"></script>
+    <script defer src="./createCCard.js"></script>
+    <script defer src="./searchFilterSort.js"></script>
+  </head>
+  <body>
+    <header>
+      <input type="text" id="search-bar" placeholder="Search countries..." />
+      <select id="filter-region-select">
+        <option value="" selected="selected">All Regions</option>
+        <option value="Africa">Africa</option>
+        <option value="Americas">Americas</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+        <option value="Oceania">Oceania</option>
+      </select>
+      <select id="filter-subregion-select">
+        <option value="">All Sub Regions</option>
+        <!-- Populate with population ranges dynamically -->
+      </select>
+      <select id="filter-population-select">
+        <option value="" selected="selected">All Populations</option>
+        <option value="0-5">0-5 million</option>
+        <option value="5-10">5-10 million</option>
+        <option value="10-50">10-50 million</option>
+        <option value="50-100">50-100 million</option>
+        <option value="100">>100 million</option>
+      </select>
+      <select id="sort-select">
+        <option value="">Default Sorting</option>
+        <option value="name-asc">Sort by Name (A-Z)</option>
+        <option value="name-desc">Sort by Name (Z-A)</option>
+        <option value="population-asc">Sort by Population (Low to High)</option>
+        <option value="population-desc">
+          Sort by Population (High to Low)
+        </option>
+      </select>
+      <button id="reset-button">Reset</button>
+    </header>
+    <main id="countries-container"></main>
+    <footer>
+      <footer>
+        <div class="pagination">
+          <button id="prev-btn" disabled>Previous</button>
+          <span id="page-num">1</span>
+          <button id="next-btn">Next</button>
+        </div>
+      </footer>
+    </footer>
+  </body>
+</html>
